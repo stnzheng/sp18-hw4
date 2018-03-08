@@ -1,0 +1,10 @@
+<h3>Create a todo:</h3>
+<%= form_for @new_todo do |f| %>
+	<%= f.label :tasks %>:
+	<%= f.text_field :tasks %><br />
+
+	<%= f.label :finished %>:
+	<%= f.text_field :finished %><br />
+	
+	<%= f.submit %>
+<% end %>

@@ -1,0 +1,39 @@
+<h2>Cats</h2>
+<ul>
+<% @cats.each do |e| %>
+	<li><%= e.name %></li>
+<% end %>
+</ul>
+
+<h2>Users</h2>
+<ul>
+<% @users.each do |e| %>
+	<%= e.name %>
+	<ul>
+		<li>Email: <%= e.email %></li>
+		<li>Age: <%= e.age %></li>
+	</ul>
+<% end %>
+</ul>
+
+<h2>Todo List</h2>
+<p>Tasks:</p>
+<ul>
+<% @todos.each do |e| %>
+	<li><%= e.tasks %> 	<%= e.finished %></li>
+<% end %>
+</ul>
+
+
+<h3>Create a todo:</h3>
+<%= form_for @new_todo do |f| %>
+	<%= f.label :tasks %>:
+	<%= f.text_field :tasks %><br />
+
+	<%= f.label :finished %>:
+	<%= f.text_field :finished %><br />
+	
+	<%= f.submit %>
+<% end %>
+
+
