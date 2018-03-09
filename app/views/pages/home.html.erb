@@ -1,7 +1,7 @@
 <h2>Cats</h2>
 <ul>
 <% @cats.each do |e| %>
-	<li><%= e.name %></li>
+	<li>Name: <%= e.name %></li>
 <% end %>
 </ul>
 
@@ -20,20 +20,11 @@
 <p>Tasks:</p>
 <ul>
 <% @todos.each do |e| %>
-	<li><%= e.tasks %> 	<%= e.finished %></li>
+	<li><%= e.tasks %> <%= e.finished %></li>
 <% end %>
 </ul>
 
+<%= link_to 'Create A New Todo ->', todos_new_path %>
 
-<h3>Create a todo:</h3>
-<%= form_for @new_todo do |f| %>
-	<%= f.label :tasks %>:
-	<%= f.text_field :tasks %><br />
-
-	<%= f.label :finished %>:
-	<%= f.text_field :finished %><br />
-	
-	<%= f.submit %>
-<% end %>
 
 
