@@ -5,7 +5,7 @@ class TodosController < ApplicationController
 
 	def create
 		@todo = Todo.create(todo_params)
-		redirect_to root_path
+		redirect_to '/'
 	end
 
 	private
